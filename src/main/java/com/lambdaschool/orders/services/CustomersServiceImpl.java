@@ -16,7 +16,7 @@ public class CustomersServiceImpl implements CustomersService {
     private CustomersRepository custrepos;
 
     @Override
-    public List<Customer> findAllCustomers(){
+    public List<Customer> findAllCustomers() {
         List<Customer> list = new ArrayList<>();
         //findAll returns an iterator set.
         //iterate over the iterator set and add each element to an array list.
@@ -25,13 +25,12 @@ public class CustomersServiceImpl implements CustomersService {
     }
 
     @Override
-    public List<Customer> findByCustomerName(String custname){
+    public List<Customer> findByCustomerName(String custname) {
         return custrepos.findByCustnameContainingIgnoringCase(custname);
     }
 
     @Override
-    public Customer findCustomersById(long id) throws EntityNotFoundException
-    {
+    public Customer findCustomersById(long id) throws EntityNotFoundException {
         return custrepos.findById(id)
                 .orElseThrow(() -> new EntityNotFoundException("Customer " + id + " Not Found"));
     }

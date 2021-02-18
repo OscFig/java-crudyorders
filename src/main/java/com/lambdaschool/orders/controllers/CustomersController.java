@@ -39,7 +39,7 @@ public class CustomersController {
     //  returns JSON of the customer you looked for with a OK status.
     //  Calls the Method in services/CustomersService (findCustomerById(long))
     @GetMapping(value = "/customer/{custid}", produces = "application/json")
-    public ResponseEntity<?> getCustomerById(@PathVariable long custid){
+    public ResponseEntity<?> getCustomerById(@PathVariable long custid) {
         Customer c = customersService.findCustomersById(custid);
         return new ResponseEntity<>(c, HttpStatus.OK);
     }

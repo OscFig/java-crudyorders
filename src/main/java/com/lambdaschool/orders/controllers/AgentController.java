@@ -24,7 +24,7 @@ public class AgentController {
     //  Returns a JSON of the agent with an Ok Status.
     //  The Method (findAgentById(long agentid) can be found in AgentsService
     @GetMapping(value = "/agent/{agentid}", produces = "application/json")
-    public ResponseEntity<?> findAgentById(@PathVariable long agentid){
+    public ResponseEntity<?> findAgentById(@PathVariable long agentid) {
 
         Agent a = agentsService.findAgentById(agentid);
         return new ResponseEntity<>(a, HttpStatus.OK);

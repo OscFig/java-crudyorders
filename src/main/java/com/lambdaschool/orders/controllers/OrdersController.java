@@ -22,7 +22,7 @@ public class OrdersController {
     //  The param (ordernum) is for the order you want.
     //  This returns a JSON of the order with a Status of OK.
     @GetMapping(value = "/order/{ordernum}", produces = {"application/json"})
-    public ResponseEntity<?> getOrderByNumber(@PathVariable long ordernum){
+    public ResponseEntity<?> getOrderByNumber(@PathVariable long ordernum) {
 
         Order o = ordersService.findOrdersById(ordernum);
         return new ResponseEntity<>(o, HttpStatus.OK);

@@ -58,8 +58,7 @@ public class Customer {
                     double paymentamt,
                     double outstanding,
                     String phone,
-                    Agent agent)
-    {
+                    Agent agent) {
         this.custname = custname;
         this.custcity = custcity;
         this.workingarea = workingarea;

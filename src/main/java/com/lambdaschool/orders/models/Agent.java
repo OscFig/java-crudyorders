@@ -40,6 +40,7 @@ public class Agent {
         this.phone = phone;
         this.country = country;
     }
+
     //  Getters and Setters
     public long getAgentcode() {
         return agentcode;

@@ -18,12 +18,12 @@ public class OrdersServiceImpl implements OrdersService {
     private OrdersRepository ordersrepos;
 
     @Override
-    public List<Order> findOrderWithAdvanceAmount(){
+    public List<Order> findOrderWithAdvanceAmount() {
         return ordersrepos.findAllByAdvanceamountGreaterThan(0.00);
     }
 
     @Override
-    public Order findOrdersById(long id) throws EntityNotFoundException{
+    public Order findOrdersById(long id) throws EntityNotFoundException {
         return ordersrepos.findById(id)
                 .orElseThrow(() -> new EntityNotFoundException("Order " + id + " Not Found"));
     }
